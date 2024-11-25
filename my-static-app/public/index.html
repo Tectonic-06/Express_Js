@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="styles.css" />
+        <meta http-equiv="refresh" content="720">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="hero">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="togggle-btn" onclick="Login()">Log In</button>
+                    <button type="button" class="togggle-btn" onclick="Register()">Register</button>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank"><img src="Resources/fb.png"></a>
+                    <a href="https://www.twitter.com" target="_blank"><img src="Resources/tw.png"></a>
+                    <a href="https://mail.google.com" target="_blank"><img src="Resources/gp.png"></a>
+                </div>
+                <form action="Login.php" method="POST" id="Login" class="input-group">
+                    <input type="text" name="Username" class="input-field" placeholder="Username" required>
+                    <input type="password" name="Password" class="input-field" placeholder="Password" required>
+                    <input type="checkbox" name="Remember" class="check-box"><span>Remember Password</span>
+                    <input type="submit" class="submit-btn" value="Log In">
+                </form>
+                <form action="Register.php" method="POST" id="Register" class="input-group">
+                    <input type="text" name="Username1" class="input-field" placeholder="Username" required>
+                    <input type="password" name="Password1" class="input-field" placeholder="Password" required>
+                    <input type="email" name="Email" class="input-field" placeholder="Email" required>
+                    <input type="number" name="Phone" placeholder="Phone number" class="input-field" optional>
+                    <input type="checkbox" name="I agree" class="check-box"><span>I agree to Terms & Conditions</span>
+                    <input type="submit" class="submit-btn" value="Register">
+                </form>
+            </div>
+        </div>
+        
+        <script>
+            var x = document.getElementById("Login");
+            var y = document.getElementById("Register");
+            var z = document.getElementById("btn");
+
+            function Register() {
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "110px";
+            }
+            function Login() {
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "0";
+            }
+        </script>
+    </body>
+</html>
